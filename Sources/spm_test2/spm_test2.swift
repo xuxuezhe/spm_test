@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import Alamofire
+//import RealmSwift
+
+
+public class spm_test2{
+    private init(){}
+    
+    public static func test2(){
+        print("test2")
+    }
+}

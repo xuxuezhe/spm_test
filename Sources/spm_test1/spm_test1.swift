@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import Alamofire
+import RealmSwift
+
+class spm_test1{
+    private init(){}
+    
+    public static func test1(){
+        print("test1")
+        let realm = try! Realm()
+        print(AF.session)
+    }
+}
