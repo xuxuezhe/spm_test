@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import RealmSwift
 
-class spm_test1{
+public class spm_test1{
     private init(){}
     
     public static func test1(){
