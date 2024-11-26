@@ -14,7 +14,7 @@ public class BLEDevice {
   public static let shared = BLEDevice()
   
 //  var manager: CBCentralManager?
-    var peripheral: CBPeripheral?
+   public var peripheral: CBPeripheral?
 //  var device: CBPeripheral?
   var write: CBCharacteristic?
   var read: CBCharacteristic?
