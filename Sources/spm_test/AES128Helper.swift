@@ -9,14 +9,14 @@
 import Foundation
 import CryptoSwift
 
-struct AES128Helper {
+public struct AES128Helper {
     private init() {}
     static let shared = AES128Helper()
     private static let SECRET_KEY : Array<UInt8> = Array([0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6, 0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c])
     private static let IV : Array<UInt8> = Array([0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f])
     private static let PREFIX : Array<UInt8> = Array([0xfe, 0x9b, 0x80, 0x03])
     private static var isExcrype : Bool = false
-    static var isAESDevice = ""
+    public static var isAESDevice = ""
     
     func encryptAES128(inputData: Array<UInt8>) -> Array<UInt8> {
           do {
