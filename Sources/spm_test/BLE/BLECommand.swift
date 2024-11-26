@@ -60,11 +60,11 @@ public class BLECommand {
     let data = Data(byteArray) // 메세지 수신 응답 메세지
       
       //0xxx
-//      var temp = ""
-//      for uint8 in byteArray{
-//          temp = temp + ", 0x\(String(format: "%02x", uint8))"
-//      }
-//      print("-------------->" + temp)
+      var temp = ""
+      for uint8 in byteArray{
+          temp = temp + ", 0x\(String(format: "%02x", uint8))"
+      }
+      print("-------------->" + temp)
       
       BLEDevice.shared.peripheral?.writeValue(Data(AES128Helper.shared.encryptAES128(inputData: byteArray)), for: BLEDevice.shared.write!, type: CBCharacteristicWriteType.withoutResponse)
 //    BLEDevice.shared.device?.writeValue(data, for: BLEDevice.shared.write!, type: CBCharacteristicWriteType.withoutResponse)
@@ -82,11 +82,11 @@ public class BLECommand {
     let checkSum = byteArray.removeLast()
       
       //0xxx
-//      var temp = ""
-//      for uint8 in value{
-//          temp = temp + ", 0x\(String(format: "%02x", uint8))"
-//      }
-//      print(temp + "<--------------")
+      var temp = ""
+      for uint8 in value{
+          temp = temp + ", 0x\(String(format: "%02x", uint8))"
+      }
+      print(temp + "<--------------")
       
     // 1. 체크썸 확인
     guard checkSum == self.checkSumCal(data: byteArray) else {
