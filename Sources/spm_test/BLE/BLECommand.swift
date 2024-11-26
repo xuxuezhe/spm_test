@@ -287,7 +287,7 @@ class BLECommand {
           
 //          Tools.shared.firestoreWriteData(data: ["BLECommand", "메모리 데이터 전송완료 C5"])
           
-          if BluetoothManager.shared.viewControllerType == .Breath{
+//          if BluetoothManager.shared.viewControllerType == .Breath{
 //              if breathViewController?.breathStatus == .None || breathViewController?.breathStatus == .Result || breathViewController?.breathStatus == .GetData{
 //                  DispatchQueue.main.async{
 //                      
@@ -306,8 +306,8 @@ class BLECommand {
 ////                      BLECommand_temp.shared.write(byteArray: byteArray)
 //                  }
 //              }
-          }
-          else if BluetoothManager.shared.viewControllerType == .Snoring{
+//          }
+//          else if BluetoothManager.shared.viewControllerType == .Snoring{
 //              if snoringViewController?.snoringStatus == .None || snoringViewController?.snoringStatus == .Result || snoringViewController?.snoringStatus == .GetData{
 //                  DispatchQueue.main.async{
 //                      
@@ -326,7 +326,7 @@ class BLECommand {
 ////                      BLECommand_temp.shared.write(byteArray: byteArray)
 //                  }
 //              }
-          }
+//          }
       }
   }
   
@@ -388,7 +388,7 @@ class BLECommand {
 //        guard existingData == nil else{ return }
         
       sleepRealm.time = timeStamp
-        sleepRealm.capacitance = BluetoothManager.shared.viewControllerType == .Snoring ? 0 : Int(capacitance)
+        sleepRealm.capacitance = Int(capacitance)
       sleepRealm.acc_x = x
       sleepRealm.acc_y = y
       sleepRealm.acc_z = z
