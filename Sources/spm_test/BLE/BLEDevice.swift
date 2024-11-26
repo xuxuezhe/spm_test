@@ -10,6 +10,7 @@ import Foundation
 import CoreBluetooth
 
 public class BLEDevice {
+    public init(){}
   public static let shared = BLEDevice()
   
 //  var manager: CBCentralManager?
