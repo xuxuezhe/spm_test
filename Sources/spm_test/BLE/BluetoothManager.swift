@@ -12,7 +12,7 @@ import CoreBluetooth
 
 
 public class BluetoothManager: NSObject {
-    static let SERVICE_UUID = CBUUID(string: "3A95E1B9-D1A2-4876-8335-02108039B3A2")
+    public static let SERVICE_UUID = CBUUID(string: "3A95E1B9-D1A2-4876-8335-02108039B3A2")
     
 //    var is_connected = false
 //    
