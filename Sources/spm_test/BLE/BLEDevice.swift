@@ -16,13 +16,13 @@ public class BLEDevice {
 //  var manager: CBCentralManager?
    public var peripheral: CBPeripheral?
 //  var device: CBPeripheral?
-  var write: CBCharacteristic?
-  var read: CBCharacteristic?
-  var battery: Int?
-  var mode: String?
+    public var write: CBCharacteristic?
+    public var read: CBCharacteristic?
+    public var battery: Int?
+    public var mode: String?
   
-  var READ_CHAR = CBUUID(string: "3a95e1b8-d1a2-4876-8335-02108039b3a2")
-  var WRITE_CHAR = CBUUID(string: "3a95e1b9-d1a2-4876-8335-02108039b3a2")
+    public var READ_CHAR = CBUUID(string: "3a95e1b8-d1a2-4876-8335-02108039b3a2")
+    public var WRITE_CHAR = CBUUID(string: "3a95e1b9-d1a2-4876-8335-02108039b3a2")
 
  
 }
