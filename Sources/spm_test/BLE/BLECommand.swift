@@ -31,7 +31,7 @@ protocol FirmwareVersionDelegate {
 public class BLECommand {
   public static let shared = BLECommand()
   
-  var commandDelegate: BLECommandDelegate?
+  public var commandDelegate: BLECommandDelegate?
     var firmwareVersionDelegate :FirmwareVersionDelegate?
     var firmwareVersion: String = ""
     var isGetedMemoryData = true
