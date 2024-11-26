@@ -53,7 +53,7 @@ public class BLECommand {
   
   /// 메세지 전달 (앱 -> 기기)
   /// - Parameter byteArray: 데이터
-  func write(byteArray: [UInt8]) {
+  public func write(byteArray: [UInt8]) {
     var byteArray = byteArray
     let checkSum = BLECommand.shared.checkSumCal(data: byteArray)
     byteArray.append(checkSum)
@@ -72,7 +72,7 @@ public class BLECommand {
   
   /// 데이터 파싱 (기기 -> 앱)
   /// - Parameter data: 데이터
-  func read(data : Data) throws {
+  public func read(data : Data) throws {
 //    let value = Array<UInt8>(data)
       let value = Array<UInt8>(AES128Helper.shared.decryptAES128(inputData: data)!)
       
