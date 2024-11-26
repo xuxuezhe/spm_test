@@ -14,11 +14,18 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire", .upToNextMajor(from: "5.10.1")),
-        .package(url: "https://github.com/realm/realm-swift", .upToNextMajor(from: "10.54.1"))
+        .package(url: "https://github.com/realm/realm-swift", .upToNextMajor(from: "10.54.1")),
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift", .upToNextMajor(from: "1.8.3"))
     ],
     targets: [
         .target(
-            name: "spm_test"),
+            name: "spm_test",
+            dependencies: [
+                .product(name: "Alamofire", package: "alamofire"),
+                .product(name: "RealmSwift", package: "realm-swift"),
+                .product(name: "CryptoSwift", package: "cryptoswift")
+            ]
+        ),
         
         .target(name: "spm_test1",
                 dependencies: [
