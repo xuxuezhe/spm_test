@@ -17,7 +17,7 @@ enum BLECommandException: Error {
   case CHECKSUM_EXCEPTION
 }
 
-protocol BLECommandDelegate {
+public protocol BLECommandDelegate {
   func onMessage() // 데이터 정상 수신
   
   func onValueResult(index: Double, value: Double) // 데이터 결과
