@@ -108,7 +108,7 @@ public class APIRouter {
   ///   - parameters: parameter
   ///   - success: 성공
   ///   - fail: 실패
-  func api(path: APIURL, method: HTTPMethod = .post, parameters: [String: Any]?, success: @escaping(_ data: [String: Any])-> Void) {
+  static func api(path: APIURL, method: HTTPMethod = .post, parameters: [String: Any]?, success: @escaping(_ data: [String: Any])-> Void) {
     
     var headers: HTTPHeaders = []
     if let access_token = Defaults[.access_token], access_token != "", path != .login {
