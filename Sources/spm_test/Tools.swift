@@ -12,17 +12,17 @@ import UIKit
 import Defaults
 //import FirebaseFirestore
 
-class Tools {
+public class Tools {
   static let shared = Tools()
   
-  private init() {
+  public init() {
   }
   
   
   /// API 성공 유무를 판단
   /// - Parameter response:
   /// - Returns: 성공 여부
-  func isSuccessResponse(response: BaseModel) -> Bool {
+  public func isSuccessResponse(response: BaseModel) -> Bool {
     
     if response.success ?? false {
       return true
