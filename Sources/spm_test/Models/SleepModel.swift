@@ -13,13 +13,13 @@ import ObjectMapper
 public class SleepModel: BaseModel {
   var user_id: Int?
   // 블루투스 센서 아이디
-  var number: String?
+    public var number: String?
   var dirname: String?
   var filename: String?
     // 잠들때까지 걸린 시간
   var asleep_time: Int?
   // 0: 수면, 1: 코골이
-  var type: Int?
+    public var type: Int?
   // 코골이 시간 (코골이 측정 시 사용, 분 단위로 입력 (2시간 = 120분)
   var snore_time: Int?
     // 호흡상태(3: 나쁨, 2: 중간, 1: 좋음, 0: 측정불가)
@@ -48,7 +48,7 @@ public class SleepModel: BaseModel {
   var data_id: Int?
   var minute: Int?
   var day: String?
-    var app_kind: String?
+    public var app_kind: String?
     // 깊은잠 시간
     var deep_sleep_time: Int?
     // 뒤척인 횟수
@@ -118,7 +118,7 @@ public class SleepModel: BaseModel {
     var sleep_now: String? // 잠든 시간
     var wake_now: String? // 깨어난 시간
     var not_measured_time: Int? // 측정 안된 시간
-    var mac: String? // 센서 MAC 주소
+    public var mac: String? // 센서 MAC 주소
     
   var result: SleepModel?
   var data: [SleepModel]?
