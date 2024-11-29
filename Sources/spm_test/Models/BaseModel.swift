@@ -39,7 +39,7 @@ public class BaseModel: Mappable {
   // 공지사항 타겟 - 0 : 사용자 , 1 : 파트너
   var target: Int?
   
-  init() {
+  public init() {
   }
   
   public required init?(map: Map) {
