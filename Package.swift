@@ -15,7 +15,12 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire", .upToNextMajor(from: "5.10.1")),
         .package(url: "https://github.com/realm/realm-swift", .upToNextMajor(from: "10.54.1")),
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift", .upToNextMajor(from: "1.8.3"))
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift", .upToNextMajor(from: "1.8.3")),
+        .package(url: "https://github.com/tristanhimmelman/ObjectMapper", .upToNextMajor(from: "4.4.3")),
+//        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON", .upToNextMajor(from: "5.0.2"))
+        .package(url: "https://github.com/antitypical/Result", .upToNextMajor(from: "5.0.0")),
+//        .package(url: "https://github.com/sunshinejr/SwiftyUserDefaults", .upToNextMajor(from: "5.3.0")),
+        .package(url: "https://github.com/sindresorhus/Defaults", .upToNextMajor(from: "7.3.1"))
     ],
     targets: [
         .target(
@@ -23,7 +28,12 @@ let package = Package(
             dependencies: [
                 .product(name: "Alamofire", package: "alamofire"),
                 .product(name: "RealmSwift", package: "realm-swift"),
-                .product(name: "CryptoSwift", package: "cryptoswift")
+                .product(name: "CryptoSwift", package: "cryptoswift"),
+                .product(name: "ObjectMapper", package: "objectmapper"),
+//                .product(name: "SwiftyJSON", package: "swiftyjson")
+                .product(name: "Result", package: "result"),
+//                .product(name: "SwiftyUserDefaults", package: "swiftyuserdefaults")
+                .product(name: "Defaults", package: "defaults")
             ]
         ),
         

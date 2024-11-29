@@ -21,6 +21,8 @@ public protocol BLECommandDelegate {
   func onMessage() // 데이터 정상 수신
   
   func onValueResult(index: Double, value: Double) // 데이터 결과
+    
+    func onStarted() // 측정시작 ack 받음
 }
 
 protocol FirmwareVersionDelegate {
@@ -108,6 +110,8 @@ public class BLECommand {
 //        }
     }
       else if cmd == 0xc3, value[6] == 0x01{ //, breathViewController?.breathCMDStatus == BreathCMDStatus.Start{ // 호흡뷰 기기에서 START ACK 받았을때
+          self.commandDelegate?.onStarted()
+          
 //          log.debug("호흡 측정시작")
 //          breathViewController?.sleepdataCreate()
       }

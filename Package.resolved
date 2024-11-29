@@ -1,5 +1,5 @@
 {
-  "originHash" : "a27d4917ad82ed61cece52c448a46ae4d0f9f67f3fd212331fa17f89d813de07",
+  "originHash" : "93215e0bff776de4f6ee003ce5309782aea81663d401dc7c19e1460f830d548b",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -20,6 +20,24 @@
       }
     },
     {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Defaults",
+      "state" : {
+        "revision" : "3efef5a28ebdbbe922d4a2049493733ed14475a6",
+        "version" : "7.3.1"
+      }
+    },
+    {
+      "identity" : "objectmapper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tristanhimmelman/ObjectMapper",
+      "state" : {
+        "revision" : "6021c6035e83a306047348666f6400dc61445d3b",
+        "version" : "4.4.3"
+      }
+    },
+    {
       "identity" : "realm-core",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core.git",
@@ -35,6 +53,15 @@
       "state" : {
         "revision" : "5553cfd1c789efdb3d6daf7f0cc0733cfe601846",
         "version" : "10.54.1"
+      }
+    },
+    {
+      "identity" : "result",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/antitypical/Result",
+      "state" : {
+        "revision" : "12920a5c2595926efab9274d6003e29f503dbb66",
+        "version" : "5.0.0"
       }
     }
   ],
