@@ -120,7 +120,7 @@ public class SleepModel: BaseModel {
     var not_measured_time: Int? // 측정 안된 시간
     public var mac: String? // 센서 MAC 주소
     
-  var result: SleepModel?
+  public var result: SleepModel?
   var data: [SleepModel]?
   
   
