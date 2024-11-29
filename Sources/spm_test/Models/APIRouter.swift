@@ -91,12 +91,12 @@ enum APIURL: String {
 }
 
 
-class APIRouter {
+public class APIRouter {
   // Singleton
-  static let shared = APIRouter()
+  public static let shared = APIRouter()
 //  var activityData: ActivityData = ActivityData()
   
-  private init() {
+  public init() {
 //    self.activityData = ActivityData(size: CGSize(width: 50, height: 50), message: "", messageFont: UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular), type: NVActivityIndicatorType.circleStrokeSpin, color: UIColor.white, padding: nil, displayTimeThreshold: 1, minimumDisplayTime: 300, backgroundColor: UIColor.clear, textColor: UIColor.black)
   }
   
