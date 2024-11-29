@@ -29,7 +29,7 @@ enum APIResult<T, Error> {
   case unexpect(NSError)
 }
 
-enum APIURL: String {
+public enum APIURL: String {
   /// 인증
   case register = "api/register" // 회원가입
   case login = "api/login" // 로그인
@@ -108,7 +108,7 @@ public class APIRouter {
   ///   - parameters: parameter
   ///   - success: 성공
   ///   - fail: 실패
-  static func api(path: APIURL, method: HTTPMethod = .post, parameters: [String: Any]?, success: @escaping(_ data: [String: Any])-> Void) {
+  public func api(path: APIURL, method: HTTPMethod = .post, parameters: [String: Any]?, success: @escaping(_ data: [String: Any])-> Void) {
     
     var headers: HTTPHeaders = []
     if let access_token = Defaults[.access_token], access_token != "", path != .login {
