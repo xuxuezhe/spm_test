@@ -13,7 +13,7 @@ import Defaults
 //import FirebaseFirestore
 
 public class Tools {
-  static let shared = Tools()
+  public static let shared = Tools()
   
   public init() {
   }
