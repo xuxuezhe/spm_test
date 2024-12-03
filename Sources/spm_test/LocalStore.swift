@@ -5,7 +5,7 @@
 import UIKit
 import Defaults
 
-extension Defaults.Keys {
+public extension Defaults.Keys {
   static let access_token = Key<String?>("access_token")
   static let email = Key<String?>("email")
   static let name = Key<String?>("name")
