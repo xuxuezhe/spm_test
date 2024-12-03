@@ -1,5 +1,5 @@
 {
-  "originHash" : "93215e0bff776de4f6ee003ce5309782aea81663d401dc7c19e1460f830d548b",
+  "originHash" : "4cae77c7ee501f06450e2de28ee38c660bc443c355144c9c64080224b6c1116a",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "678d442c6f7828def400a70ae15968aef67ef52d",
         "version" : "1.8.3"
+      }
+    },
+    {
+      "identity" : "csv.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yaslab/CSV.swift",
+      "state" : {
+        "revision" : "b4371dc833ba22ab6ead90fb63d267c3cf9ce773",
+        "version" : "2.5.2"
       }
     },
     {
