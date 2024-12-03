@@ -146,7 +146,7 @@ public class APIRouter {
       })
     }
     
-  func csv_api(path: APIURL, parameters: [String: Any]?, file: Data, bytes: [UInt8]?, fileName: String, success: @escaping(_ data: [String: Any])-> Void, fail: @escaping (_ error: Error?)-> Void) {
+  public func csv_api(path: APIURL, parameters: [String: Any]?, file: Data, bytes: [UInt8]?, fileName: String, success: @escaping(_ data: [String: Any])-> Void, fail: @escaping (_ error: Error?)-> Void) {
 //    let headers: HTTPHeaders = [
 //      "Content-type": "multipart/form-data"
 //    ]

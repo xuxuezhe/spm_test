@@ -21,7 +21,7 @@ public class SleepModel: BaseModel {
   // 0: 수면, 1: 코골이
     public var type: Int?
   // 코골이 시간 (코골이 측정 시 사용, 분 단위로 입력 (2시간 = 120분)
-  var snore_time: Int?
+  public var snore_time: Int?
     // 호흡상태(3: 나쁨, 2: 중간, 1: 좋음, 0: 측정불가)
   var apnea_state: Int?
     // 이상호흡 총 횟수
@@ -45,7 +45,7 @@ public class SleepModel: BaseModel {
   var state: Int?
   var calendarDate: Date?
   // 수면 데이터 아이디
-  var data_id: Int?
+  public var data_id: Int?
   var minute: Int?
   var day: String?
     public var app_kind: String?
@@ -82,7 +82,7 @@ public class SleepModel: BaseModel {
     var wake_sleep_time: Int?
     var description: String?
     // 기침 횟수
-    var cough_count: Int?
+    public var cough_count: Int?
     // 진동 횟수
     var snore_count: Int?
     var breath_score: Int?

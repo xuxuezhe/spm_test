@@ -24,7 +24,7 @@ public class BaseModel: Mappable {
   // 에러목록
   var errors: [String]?
   // 키
-  var id: Int?
+  public var id: Int?
   
   /// 현재 페이지 번호
   var page: Int?
