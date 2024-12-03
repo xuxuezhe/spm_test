@@ -23,6 +23,8 @@ public protocol BLECommandDelegate {
   func onValueResult(index: Double, value: Double) // 데이터 결과
     
     func onStarted() // 측정시작 ack 받음
+    
+    func onStoped() // 측정종료 ack 받음
 }
 
 protocol FirmwareVersionDelegate {
@@ -177,7 +179,7 @@ public class BLECommand {
           let byteArray: [UInt8] = [0xFE, 0x9B, 0x80, 0x03, 0xCF, 0x00]
           write(byteArray: byteArray)
       }
-//      else if cmd == 0xc3, value[6] == 0x00, breathViewController?.breathCMDStatus == BreathCMDStatus.Stop{ // 호흡뷰 기기에서 STOP ACK 받았을때
+      else if cmd == 0xc3, value[6] == 0x00 { // 호흡뷰 기기에서 STOP ACK 받았을때
 //          if breathViewController?.breathStatus == .None || breathViewController?.breathStatus == .Result || breathViewController?.breathStatus == .GetData{
 //              return
 //          }
@@ -209,10 +211,12 @@ public class BLECommand {
 //              self.breathViewController?.breathCMDStatus = BreathCMDStatus.None
 //              
 //              self.breathViewController?.createCSV()
-//              
+          
+          self.commandDelegate?.onStarted()
+//
 //              BLEDevice.shared.mode = nil
 //          }
-//      }
+      }
 //      else if cmd == 0xcE, value[6] == 0x13, snoringViewController?.snoringCMDStatus == SnoringCMDStatus.Stop{ // 코골이 기기에서 STOP ACK 받았을때
 //          if snoringViewController?.snoringStatus == .None || snoringViewController?.snoringStatus == .Result || snoringViewController?.snoringStatus == .GetData{
 //              return

@@ -13,7 +13,7 @@ final class SleepListRealm: Object {
   let items = List<SleepRealm>()
 }
 
-final class SleepRealm: Object {
+public final class SleepRealm: Object {
   @objc dynamic var index : Int = 0
   @objc dynamic var time : String = ""
   @objc dynamic var capacitance : Int = 0 // 측정한 Capacitance 값 전송 (최대 8자리 정수 값, 10진수 기준)
